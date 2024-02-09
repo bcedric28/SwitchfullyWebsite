@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1a34fe8b1b.js" crossorigin="anonymous"></script>
+    <title>Cédric Bodenhorst</title>
+</head>
+<body>
+    <header>
+        <nav class="fixed-navbar">
+            <ul>
+                <li><a class="active" href="#presentation">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="presentation">
+        <div class="profile">
+            <img src="profile.jpeg" alt="Cédric Bodenhorst" class="profile-picture">
+            <h1>Cédric Bodenhorst</h1>
+            <p>
+            My name is Cédric Bodenhorst. I am 25 years old and passionate about development. <br>
+            Currently, I have 4 years of experience as a backend JavaScript developer. <br>
+            I am excited to start learning JAVA with all of you!
+            </p>
+        </div>
+    </section>
+
+    <section id="skills-section">
+
+
+        <div class="skill-row">
+            <div style="background-color: #fad80d;" class="skill-icon">
+                <i class="fab fa-js fa-2x"></i>
+                <p>JavaScript</p>
+            </div>
+
+            <div style="background-color: #fcb900;" class="skill-icon">
+                <i class="fab fa-aws fa-2x"></i>
+                <p>AWS</p>
+            </div>
+
+            <div style="background-color: #9fd8f1;" class="skill-icon">
+                <i class="fas fa-database fa-2x"></i>
+                <p>SQL</p>
+            </div>
+        </div>
+
+        <div class="skill-row">
+            <div style="background-color: #097a9e;" class="skill-icon">
+                <i class="fab fa-react fa-2x"></i>
+                <p>React</p>
+            </div>
+
+            <div style="background-color: #73A960;" class="skill-icon">
+                <i class="fab fa-node fa-2x"></i>
+                <p>Node.js</p>
+            </div>
+
+            <div class="skill-icon">
+                <i class="fab fa-github fa-2x"></i>
+                <p>GitHub</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-links">
+            <a href="#presentation">About Me</a>
+            <a href="#skills">Skills</a>
+        </div>
+
+        <p>&copy; 2024 Cédric Bodenhorst. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Script pour l'animation de défilement
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function setActiveLink() {
+            let fromTop = window.scrollY + 50;
+
+            sections.forEach((section, index) => {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks[index].classList.add('active');
+                } else {
+                    navLinks[index].classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+    </script>
+</body>
+</html>

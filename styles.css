@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px; /* Ajout d'une marge intérieure pour étendre la zone cliquable */
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Ajout de la couleur de fond au survol */
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.profile {
+    max-width: 600px; /* Set the maximum width for the text */
+    margin: auto; /* Center the text */
+    padding: 20px; /* Add padding for better visual appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff; /* Ajoutez une bordure blanche autour de l'image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajoutez une ombre à l'image */
+}
+
+#skills-section {
+          text-align: center;
+          padding: 50px 0;
+          display: flex;
+          flex-direction: column;
+
+      }
+
+      .skill-row {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 20px; /* Add space between rows */
+      }
+
+      .skill-icon {
+          margin: 20px;
+          margin-left: 50px;
+          margin-right: 50px;
+          box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+          border-radius: 10px;
+          padding: 50px;
+          min-width: 65px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      @keyframes bounce {
+           0%, 20%, 50%, 80%, 100% {
+               transform: translateY(0);
+           }
+           40% {
+               transform: translateY(-20px);
+           }
+           60% {
+               transform: translateY(-10px);
+           }
+       }
+
+
+      .skill-icon:hover {
+           color: white; /* Change color on hover */
+           animation: bounce 0.8s;
+
+       }
+
+
+section:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.active {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+}
+
+
+.footer-links a, .footer-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-icons img {
+    width: 20px;
+    height: 20px;
+}
